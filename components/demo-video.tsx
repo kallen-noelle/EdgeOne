@@ -5,9 +5,10 @@ import { useEffect, useRef } from 'react'
 interface DemoVideoProps {
   src: string
   label: string
+  className?: string
 }
 
-export function DemoVideo({ src, label }: DemoVideoProps) {
+export function DemoVideo({ src, label, className }: DemoVideoProps) {
   const ref = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export function DemoVideo({ src, label }: DemoVideoProps) {
   return (
     <video
       ref={ref}
+      className={className}
       src={src}
       muted
       loop

@@ -2,10 +2,10 @@ import { DemoVideo } from './demo-video'
 import { Reveal } from './reveal'
 
 const clips = [
-  { src: '/animations/demo/idle-breathing.webm', label: '待机呼吸', note: 'IDLE' },
-  { src: '/animations/demo/talk-murmur.webm', label: '说话低语', note: 'TALK' },
-  { src: '/animations/demo/thinking-bubble.webm', label: '思考冒泡', note: 'THINK' },
-  { src: '/animations/demo/click-wave.webm', label: '点击回应', note: 'CLICK' },
+  { src: '/characters/ojousama-letter.webm', label: '送情书', note: '橙毛大小姐' },
+  { src: '/characters/huangmao-fall.webm', label: '转圈摔倒', note: '黄毛该溜子' },
+  { src: '/characters/baimao-wave.webm', label: '挥手打招呼', note: '白毛小龙娘' },
+  { src: '/characters/xiaohuli-tail.webm', label: '不许碰尾巴', note: '黑毛小狐狸' },
 ]
 
 export function AvatarShowcase() {
@@ -15,10 +15,10 @@ export function AvatarShowcase() {
         <div className="section-head">
           <div>
             <span className="eyebrow">动作片段</span>
-            <h2>它会呼吸，也会回应你</h2>
+            <h2>每个动作，都是独立片段</h2>
           </div>
           <p className="lede">
-            每个动作都是独立的透明视频片段。状态机按权重挑选基础动作，再用双视频交叉淡入切换，不会出现黑帧。
+            五位角色共 147 段透明视频。状态机按权重挑选基础动作，再用双视频交叉淡入切换，不会出现黑帧。
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export function AvatarShowcase() {
             <Reveal key={clip.src} delay={index * 90}>
               <article className="clip">
                 <div className="clip-window">
-                  <DemoVideo src={clip.src} label={`大肥鱼${clip.label}动画`} />
+                  <DemoVideo className="is-character" src={clip.src} label={`${clip.label}动画`} />
                 </div>
                 <div className="clip-label">
                   {clip.label}

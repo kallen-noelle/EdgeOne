@@ -64,7 +64,7 @@ const features: { icon: IconName, title: string, body: string }[] = [
   {
     icon: 'layers',
     title: '模型可切换',
-    body: '当前接入 DeepSeek。聊天走 OpenAI 兼容协议，后续会加入 Claude Code、OpenAI 与 Gemma。',
+    body: '默认接入 DeepSeek，也支持任意 OpenAI 兼容服务。填入地址、Key 与模型名即可切换。',
   },
   {
     icon: 'shield',

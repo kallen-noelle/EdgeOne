@@ -3,7 +3,7 @@ import { Reveal } from './reveal'
 const stages = [
   {
     title: 'DeepSeek',
-    body: '当前版本已接入 DeepSeek，支持多轮对话、语音朗读与动作联动。日常聊天、写代码时的碎碎念都够用。',
+    body: '默认接入 DeepSeek，支持多轮对话、语音朗读与动作联动。也可以在设置里换成任意 OpenAI 兼容服务。',
     status: '已上线',
     live: true,
   },
@@ -14,8 +14,8 @@ const stages = [
     live: false,
   },
   {
-    title: 'OpenAI · Gemma',
-    body: '随后补充 OpenAI 与 Gemma。云端推理和本地模型都会保留，按你的机器与预算自由选择。',
+    title: 'Gemma 本地',
+    body: '随后补充本地 Gemma。云端推理和本地模型都会保留，按你的机器与预算自由选择。',
     status: '规划中',
     live: false,
   },
@@ -23,9 +23,9 @@ const stages = [
 
 const models = [
   { name: 'DeepSeek', now: true },
+  { name: 'OpenAI 兼容', now: true },
   { name: 'Claude Code', now: false },
-  { name: 'OpenAI', now: false },
-  { name: 'Gemma', now: false },
+  { name: 'Gemma 本地', now: false },
 ]
 
 export function ModelRoadmap() {
@@ -35,10 +35,10 @@ export function ModelRoadmap() {
         <div className="section-head">
           <div>
             <span className="eyebrow">模型路线</span>
-            <h2>先养熟大肥鱼，再换更多大脑</h2>
+            <h2>先养熟五位伙伴，再换更多大脑</h2>
           </div>
           <p className="lede">
-            当前只支持 DeepSeek，这是我们验证整条链路的起点。之后按顺序接入 Claude Code、OpenAI 与 Gemma。
+            默认接入 DeepSeek，同时支持任意 OpenAI 兼容服务。之后按顺序补充 Claude Code 与本地 Gemma。
           </p>
         </div>
 

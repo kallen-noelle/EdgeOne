@@ -1,4 +1,5 @@
 import { AvatarShowcase } from '@/components/avatar-showcase'
+import { CharacterRoster } from '@/components/character-roster'
 import { DownloadSection } from '@/components/download-section'
 import { Faq } from '@/components/faq'
 import { Features } from '@/components/features'
@@ -13,6 +14,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
+        <CharacterRoster />
         <AvatarShowcase />
         <Features />
         <ModelRoadmap />

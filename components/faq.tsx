@@ -3,7 +3,11 @@ import { Reveal } from './reveal'
 const questions = [
   {
     question: '现在支持哪些模型？',
-    answer: '当前版本只接入 DeepSeek。聊天走 OpenAI 兼容协议，后续会按路线加入 Claude Code、OpenAI 与 Gemma。',
+    answer: '默认接入 DeepSeek，也支持任意 OpenAI 兼容服务。聊天走 OpenAI 兼容协议，后续会补充 Claude Code 与本地 Gemma。',
+  },
+  {
+    question: '五位角色有什么区别？',
+    answer: '蓝毛小女仆温柔俏皮、橙毛大小姐优雅傲娇、黄毛该溜子活泼大方、白毛小龙娘温柔逞强、黑毛小狐狸狡黠有分寸。每位都有独立的人设、待机与小动作动画，切换角色后聊天语气也会跟着换。',
   },
   {
     question: '需要自己准备 API Key 吗？',
@@ -11,7 +15,7 @@ const questions = [
   },
   {
     question: '能换成别的形象吗？',
-    answer: '可以。形象是带透明通道的视频 ZIP 动画包，在设置里导入新的动画包即可替换，不需要重新安装程序。',
+    answer: '可以。程序内置五位角色，也可以在设置里导入带透明通道的视频 ZIP 动画包，不需要重新安装。',
   },
   {
     question: '会收集我的聊天记录吗？',

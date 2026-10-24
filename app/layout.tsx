@@ -4,11 +4,11 @@ import type { ReactNode } from 'react'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'AIRI 桌宠 · 桌面养一只会说话的大肥鱼',
-  description: '基于 AIRI 对话内核与 dsh-pet 透明视频动画的 Windows 桌面宠物。当前形象为大肥鱼，已接入 DeepSeek，即将支持 Claude Code、OpenAI 与 Gemma。',
+  title: 'aipetdex · 五位 AI 伙伴住进你的桌面',
+  description: 'aipetdex 是常驻 Windows 桌面的 AI 宠物。首批 5 位角色，透明视频动画、语音对话与点击互动，可接入 DeepSeek 及任意 OpenAI 兼容服务。',
   openGraph: {
-    title: 'AIRI 桌宠 · 桌面养一只会说话的大肥鱼',
-    description: '常驻桌面的 AI 宠物，支持语音对话、透明视频动画与点击互动。',
+    title: 'aipetdex · 五位 AI 伙伴住进你的桌面',
+    description: '常驻桌面的 AI 宠物，5 位角色、147 段透明动画，支持语音对话与点击互动。',
     type: 'website',
     locale: 'zh_CN',
   },

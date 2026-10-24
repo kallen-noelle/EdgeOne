@@ -1,12 +1,12 @@
 {
-  "name": "airi-pet-site",
+  "name": "aipetdex-site",
   "installCommand": "pnpm install",
   "buildCommand": "pnpm build",
   "outputDirectory": "./out",
   "nodeVersion": "22.11.0",
   "headers": [
     {
-      "source": "/animations/*",
+      "source": "/characters/*",
       "headers": [
         {
           "key": "Cache-Control",

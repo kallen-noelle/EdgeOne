@@ -8,21 +8,21 @@ export function Hero() {
       <div className="wrap hero-grid">
         <div>
           <Reveal>
-            <span className="eyebrow">AIRI × dsh-pet</span>
+            <span className="eyebrow">aipetdex × dsh-pet</span>
           </Reveal>
 
           <Reveal delay={80}>
             <h1>
-              桌面养一只
+              桌面住进
               <br />
-              <span className="accent">会说话的大肥鱼</span>
+              <span className="accent">五位 AI 伙伴</span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="lede">
-              结合 AIRI 对话内核与 dsh-pet 透明视频动画的 Windows 桌面宠物。
-              这只蓝鲸系的小家伙常驻桌面、听得见你、看得懂你的话，也会在你写代码时自己找点事做。
+              aipetdex 是常驻 Windows 桌面的 AI 宠物。
+              五位性格各异的角色，用透明视频动画、语音对话与点击互动陪你工作。
             </p>
           </Reveal>
 
@@ -35,7 +35,7 @@ export function Hero() {
                   <path d="M5 18h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                 </svg>
               </a>
-              <a className="btn btn-ghost" href="#actions">看看它会做什么</a>
+              <a className="btn btn-ghost" href="#characters">认识五位角色</a>
             </div>
           </Reveal>
 
@@ -47,11 +47,11 @@ export function Hero() {
               </span>
               <span className="chip">
                 <span className="dot" />
-                形象 大肥鱼
+                首发角色 5 位
               </span>
-              <span className="chip is-planned">
+              <span className="chip">
                 <span className="dot" />
-                Claude Code · OpenAI · Gemma 在路上
+                147 段透明动画
               </span>
             </div>
           </Reveal>
@@ -74,12 +74,16 @@ export function Hero() {
             </div>
 
             <div className="aquarium-inner">
-              <DemoVideo src="/animations/demo/idle-breathing.webm" label="大肥鱼待机呼吸动画" />
+              <DemoVideo
+                className="is-character"
+                src="/characters/ojousama-idle.webm"
+                label="橙毛大小姐待机翻书动画"
+              />
             </div>
 
             <div className="aquarium-tag is-bottom">
-              <strong>大肥鱼</strong>
-              <span>BIG FISH · IDLE</span>
+              <strong>橙毛大小姐</strong>
+              <span>OJOU-SAMA · IDLE</span>
             </div>
           </div>
         </Reveal>

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { FishMark } from './fish-mark'
 
 const links = [
+  { href: '#characters', label: '角色' },
   { href: '#actions', label: '动作' },
   { href: '#abilities', label: '能力' },
   { href: '#models', label: '模型' },
@@ -12,7 +13,8 @@ const links = [
   { href: '#faq', label: '问答' },
 ]
 
-export const releasesUrl = 'https://github.com/moeru-ai/airi/releases'
+export const repoUrl = 'https://gitee.com/kallen-noelle/airi'
+export const releasesUrl = `${repoUrl}/releases`
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
@@ -27,10 +29,10 @@ export function SiteHeader() {
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="wrap nav">
-        <a className="brand" href="#top" aria-label="AIRI 桌宠首页">
+        <a className="brand" href="#top" aria-label="aipetdex 首页">
           <FishMark className="brand-mark" />
-          <span>AIRI 桌宠</span>
-          <span className="brand-sub">DESKTOP PET</span>
+          <span>aipetdex</span>
+          <span className="brand-sub">AI DESKTOP PET</span>
         </a>
 
         <nav className="nav-links" aria-label="主导航">

@@ -9,9 +9,9 @@ export function DownloadSection() {
           <div className="download-panel">
             <div className="download-copy">
               <span className="eyebrow">下载</span>
-              <h2>把大肥鱼放进你的桌面</h2>
+              <h2>把五位伙伴放进你的桌面</h2>
               <p className="lede">
-                安装包从 GitHub Releases 发布。装好之后填入自己的 DeepSeek API Key，它就能开口说话。
+                安装包从项目 Releases 发布。装好之后填入自己的 DeepSeek API Key，她们就能开口说话。
               </p>
 
               <ol className="steps">
@@ -21,11 +21,11 @@ export function DownloadSection() {
                 </li>
                 <li>
                   <strong>双击安装</strong>
-                  按向导完成安装，首次启动会自带大肥鱼形象包。
+                  按向导完成安装，首次启动会自带五位角色的动画包。
                 </li>
                 <li>
                   <strong>填入密钥</strong>
-                  在设置里粘贴 DeepSeek API Key，保存后开始对话。
+                  在设置里粘贴 DeepSeek API Key，或者换成任意 OpenAI 兼容服务。
                 </li>
               </ol>
             </div>
@@ -53,8 +53,8 @@ export function DownloadSection() {
                   <dd>DeepSeek</dd>
                 </div>
                 <div className="spec">
-                  <dt>内置形象</dt>
-                  <dd>大肥鱼</dd>
+                  <dt>内置角色</dt>
+                  <dd>5 位 · 147 段动画</dd>
                 </div>
                 <div className="spec">
                   <dt>安装包格式</dt>
@@ -62,12 +62,12 @@ export function DownloadSection() {
                 </div>
                 <div className="spec">
                   <dt>下载来源</dt>
-                  <dd>GitHub Releases</dd>
+                  <dd>Gitee Releases</dd>
                 </div>
               </dl>
 
               <a className="btn btn-primary" href={releasesUrl} target="_blank" rel="noreferrer">
-                前往 GitHub 下载
+                前往 Releases 下载
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M7 17 17 7M17 7H9m8 0v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
