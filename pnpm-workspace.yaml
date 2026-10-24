@@ -1,0 +1,5 @@
+# This site is its own pnpm root.
+# The monorepo workspace globs do not include this directory, so the site keeps
+# its own lockfile and never changes the root lockfile.
+packages:
+  - .
