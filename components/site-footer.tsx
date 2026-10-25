@@ -1,3 +1,5 @@
+import { characterCount, totalClips } from '@/lib/characters'
+
 import { FishMark } from './fish-mark'
 import { releasesUrl, repoUrl } from './site-header'
 
@@ -12,7 +14,7 @@ export function SiteFooter() {
               <span>aipetdex</span>
             </a>
             <p>
-              常驻 Windows 桌面的 AI 宠物。内置五位角色与 147 段透明动画，支持 DeepSeek 与任意 OpenAI 兼容服务。
+              {`常驻 Windows 桌面的 AI 宠物。内置 ${characterCount} 位角色与 ${totalClips} 段透明动画，支持 DeepSeek 与任意 OpenAI 兼容服务。`}
             </p>
           </div>
 

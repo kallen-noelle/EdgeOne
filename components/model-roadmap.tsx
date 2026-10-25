@@ -1,3 +1,5 @@
+import { characterCount } from '@/lib/characters'
+
 import { Reveal } from './reveal'
 
 const stages = [
@@ -35,7 +37,7 @@ export function ModelRoadmap() {
         <div className="section-head">
           <div>
             <span className="eyebrow">模型路线</span>
-            <h2>先养熟五位伙伴，再换更多大脑</h2>
+            <h2>{`先养熟 ${characterCount} 位伙伴，再换更多大脑`}</h2>
           </div>
           <p className="lede">
             默认接入 DeepSeek，同时支持任意 OpenAI 兼容服务。之后按顺序补充 Claude Code 与本地 Gemma。

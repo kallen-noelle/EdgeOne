@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="page">
       <SiteHeader />
-      <main>
+      <div className="page-body">
         <Hero />
         <CharacterRoster />
         <AvatarShowcase />
@@ -20,7 +20,7 @@ export default function HomePage() {
         <ModelRoadmap />
         <DownloadSection />
         <Faq />
-      </main>
+      </div>
       <SiteFooter />
     </div>
   )

@@ -8,32 +8,11 @@
     "accent": "#7dd3fc",
     "clips": 106,
     "idle": "/characters/main-idle.webm",
+    "talk": "/characters/main-talk.webm",
+    "thinking": "/characters/main-think.webm",
+    "click": "/characters/main-action.webm",
     "action": "/characters/main-action.webm",
     "actionLabel": "优雅女仆舞"
-  },
-  {
-    "id": "character2",
-    "name": "橙毛大小姐",
-    "roman": "OJOU-SAMA",
-    "role": "优雅 · 傲娇",
-    "description": "嘴硬心软的大小姐。待机时安静翻书，被戳中会先回嘴，再偷偷关心你。",
-    "accent": "#ffb168",
-    "clips": 19,
-    "idle": "/characters/character2-idle.webm",
-    "action": "/characters/character2-action.webm",
-    "actionLabel": "送情书"
-  },
-  {
-    "id": "character3",
-    "name": "黄毛该溜子",
-    "roman": "GAL",
-    "role": "活泼 · 大方",
-    "description": "伙伴里最大方的一个。爱开玩笑、爱分享，热闹永远不嫌多。",
-    "accent": "#ffe066",
-    "clips": 8,
-    "idle": "/characters/character3-idle.webm",
-    "action": "/characters/character3-action.webm",
-    "actionLabel": "转圈摔倒"
   },
   {
     "id": "character4",
@@ -44,19 +23,25 @@
     "accent": "#8fd8ff",
     "clips": 10,
     "idle": "/characters/character4-idle.webm",
+    "talk": null,
+    "thinking": null,
+    "click": "/characters/character4-action.webm",
     "action": "/characters/character4-action.webm",
     "actionLabel": "挥手打招呼"
   },
   {
-    "id": "character5",
-    "name": "黑毛小狐狸",
-    "roman": "FOX",
-    "role": "狡黠 · 分寸",
-    "description": "聪明的小狐狸。爱搞善意的小恶作剧，发现你真的不高兴就收手。",
-    "accent": "#ff9a8b",
-    "clips": 4,
-    "idle": "/characters/character5-idle.webm",
-    "action": "/characters/character5-action.webm",
-    "actionLabel": "不许碰尾巴"
+    "id": "character2",
+    "name": "橙毛大小姐",
+    "roman": "OJOU-SAMA",
+    "role": "优雅 · 傲娇",
+    "description": "嘴硬心软的大小姐。待机时安静翻书，被戳中会先回嘴，再偷偷关心你。",
+    "accent": "#ffb168",
+    "clips": 19,
+    "idle": "/characters/character2-idle.webm",
+    "talk": "/characters/character2-talk.webm",
+    "thinking": null,
+    "click": "/characters/character2-action.webm",
+    "action": "/characters/character2-action.webm",
+    "actionLabel": "送情书"
   }
 ]

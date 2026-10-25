@@ -1,12 +1,11 @@
+import { characterCount, characters, totalClips } from '@/lib/characters'
+
 import { DemoVideo } from './demo-video'
 import { Reveal } from './reveal'
 
-const clips = [
-  { src: '/characters/ojousama-letter.webm', label: '送情书', note: '橙毛大小姐' },
-  { src: '/characters/huangmao-fall.webm', label: '转圈摔倒', note: '黄毛该溜子' },
-  { src: '/characters/baimao-wave.webm', label: '挥手打招呼', note: '白毛小龙娘' },
-  { src: '/characters/xiaohuli-tail.webm', label: '不许碰尾巴', note: '黑毛小狐狸' },
-]
+const clips = characters.flatMap(character => character.action
+  ? [{ src: character.action, label: character.actionLabel ?? character.name, note: character.name }]
+  : [])
 
 export function AvatarShowcase() {
   return (
@@ -18,7 +17,7 @@ export function AvatarShowcase() {
             <h2>每个动作，都是独立片段</h2>
           </div>
           <p className="lede">
-            五位角色共 147 段透明视频。状态机按权重挑选基础动作，再用双视频交叉淡入切换，不会出现黑帧。
+            {`${totalClips} 段透明视频分布在 ${characterCount} 位角色上。状态机按权重挑选基础动作，再用双视频交叉淡入切换，不会出现黑帧。`}
           </p>
         </div>
 

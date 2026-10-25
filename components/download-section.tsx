@@ -1,3 +1,5 @@
+import { characterCount, totalClips } from '@/lib/characters'
+
 import { Reveal } from './reveal'
 import { releasesUrl } from './site-header'
 
@@ -9,7 +11,7 @@ export function DownloadSection() {
           <div className="download-panel">
             <div className="download-copy">
               <span className="eyebrow">下载</span>
-              <h2>把五位伙伴放进你的桌面</h2>
+              <h2>{`把 ${characterCount} 位伙伴放进你的桌面`}</h2>
               <p className="lede">
                 安装包从项目 Releases 发布。装好之后填入自己的 DeepSeek API Key，她们就能开口说话。
               </p>
@@ -21,7 +23,7 @@ export function DownloadSection() {
                 </li>
                 <li>
                   <strong>双击安装</strong>
-                  按向导完成安装，首次启动会自带五位角色的动画包。
+                  {`按向导完成安装，首次启动会自带 ${characterCount} 位角色的动画包。`}
                 </li>
                 <li>
                   <strong>填入密钥</strong>
@@ -54,7 +56,7 @@ export function DownloadSection() {
                 </div>
                 <div className="spec">
                   <dt>内置角色</dt>
-                  <dd>5 位 · 147 段动画</dd>
+                  <dd>{`${characterCount} 位 · ${totalClips} 段动画`}</dd>
                 </div>
                 <div className="spec">
                   <dt>安装包格式</dt>

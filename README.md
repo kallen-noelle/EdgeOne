@@ -4,10 +4,11 @@ Product site for aipetdex, the Windows desktop pet. It uses Next.js static expor
 
 ## What this app does
 
-- Shows the five built-in characters: 蓝毛小女仆, 橙毛大小姐, 黄毛该溜子, 白毛小龙娘, and 黑毛小狐狸.
-- Plays one idle clip for each of the five characters and four action clips.
+- Shows three built-in characters: 蓝毛小女仆, 橙毛大小姐, and 白毛小龙娘.
+- Plays interactive idle, talk, thinking, and one-shot reaction clips on the hero stage.
 - Explains the desktop pet features, model support, and download steps.
 - Links the Windows installer to the project releases.
+- Links the source repository at `https://github.com/kallen-noelle/aipetdex`.
 
 ## Use this app
 
@@ -46,15 +47,22 @@ EdgeOne Pages supports Next.js only in static export mode. Keep `output: 'export
 | --- | --- |
 | `app/` | Layout, page, and global styles. |
 | `components/` | Page sections, including the character roster. |
-| `public/characters/` | Idle and action clips for the five characters. |
+| `data/characters.json` | Character data, including the clip for each animation chain. |
+| `public/characters/` | Idle, talk, thinking, and action clips for the three site characters. |
 | `public/fonts/` | Subset of Chill Round M and Departure Mono. |
 | `edgeone.json` | EdgeOne Pages build and cache settings. |
 
-## Character clips
+## Character data
 
-The site uses `640 × 360` VP9-alpha webm clips. Each file is a copy of one clip from the repository `assets/` folder. Keep the file names in ASCII so URLs stay simple.
+This repository carries its own copy of the site data and clips. It shows three characters only: `main`, `character2`, and `character4`.
 
-To swap a clip, copy another webm over the file in `public/characters/`. Keep the same file name. Large clips increase the static export size, so prefer clips under 5 MB.
+`data/characters.json` maps each character to one clip per chain. `talk` and `thinking` can be `null`, and the showcase then falls back to the idle clip. `click` drives the one-shot Happy and Poke buttons.
+
+The clips come from the monorepo `assets/<id>/animations/` folders. When you copy a new clip, keep the ASCII file names in `public/characters/` unchanged.
+
+The site uses `640 × 360` VP9-alpha webm clips. Keep clips under 5 MB to limit the static export size.
+
+Running `pnpm characters:build` at the monorepo root rewrites this data for all five characters. Do not run it while this repository must show three characters.
 
 ## Do not use this app
 

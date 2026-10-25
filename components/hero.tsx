@@ -1,4 +1,6 @@
-import { DemoVideo } from './demo-video'
+import { characterCount, totalClips } from '@/lib/characters'
+
+import { CharacterShowcase } from './character-showcase'
 import { Reveal } from './reveal'
 import { releasesUrl } from './site-header'
 
@@ -15,14 +17,13 @@ export function Hero() {
             <h1>
               桌面住进
               <br />
-              <span className="accent">五位 AI 伙伴</span>
+              <span className="accent">{`${characterCount} 位 AI 伙伴`}</span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="lede">
-              aipetdex 是常驻 Windows 桌面的 AI 宠物。
-              五位性格各异的角色，用透明视频动画、语音对话与点击互动陪你工作。
+              {`aipetdex 是常驻 Windows 桌面的 AI 宠物。${characterCount} 位性格各异的角色，用透明视频动画、语音对话与点击互动陪你工作。`}
             </p>
           </Reveal>
 
@@ -35,7 +36,7 @@ export function Hero() {
                   <path d="M5 18h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                 </svg>
               </a>
-              <a className="btn btn-ghost" href="#characters">认识五位角色</a>
+              <a className="btn btn-ghost" href="#characters">{`认识 ${characterCount} 位角色`}</a>
             </div>
           </Reveal>
 
@@ -47,45 +48,18 @@ export function Hero() {
               </span>
               <span className="chip">
                 <span className="dot" />
-                首发角色 5 位
+                {`首发角色 ${characterCount} 位`}
               </span>
               <span className="chip">
                 <span className="dot" />
-                147 段透明动画
+                {`${totalClips} 段透明动画`}
               </span>
             </div>
           </Reveal>
         </div>
 
         <Reveal delay={200}>
-          <div className="aquarium">
-            <div className="bubbles" aria-hidden="true">
-              <span className="bubble" />
-              <span className="bubble" />
-              <span className="bubble" />
-              <span className="bubble" />
-              <span className="bubble" />
-              <span className="bubble" />
-            </div>
-
-            <div className="aquarium-tag is-top">
-              <span className="live">LIVE</span>
-              <strong>透明视频动画</strong>
-            </div>
-
-            <div className="aquarium-inner">
-              <DemoVideo
-                className="is-character"
-                src="/characters/ojousama-idle.webm"
-                label="橙毛大小姐待机翻书动画"
-              />
-            </div>
-
-            <div className="aquarium-tag is-bottom">
-              <strong>橙毛大小姐</strong>
-              <span>OJOU-SAMA · IDLE</span>
-            </div>
-          </div>
+          <CharacterShowcase />
         </Reveal>
       </div>
     </section>
