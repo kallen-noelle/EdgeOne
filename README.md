@@ -4,7 +4,7 @@ Product site for aipetdex, the Windows desktop pet. It uses Next.js static expor
 
 ## What this app does
 
-- Shows three built-in characters: 蓝毛小女仆, 橙毛大小姐, and 白毛小龙娘.
+- Shows three built-in characters: 蓝毛大肥鱼, 橙毛大小姐, and 白毛小龙娘.
 - Plays interactive idle, talk, thinking, and one-shot reaction clips on the hero stage.
 - Explains the desktop pet features, model support, and download steps.
 - Links the Windows installer to the project releases.

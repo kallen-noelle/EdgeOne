@@ -29,7 +29,6 @@ export function SiteFooter() {
               <strong>Site</strong>
               <a href="#characters">角色</a>
               <a href="#abilities">能力</a>
-              <a href="#models">模型路线</a>
               <a href="#download">下载</a>
             </div>
             <div>

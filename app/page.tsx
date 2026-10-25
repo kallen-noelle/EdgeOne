@@ -3,7 +3,6 @@ import { DownloadSection } from '@/components/download-section'
 import { Faq } from '@/components/faq'
 import { Features } from '@/components/features'
 import { Hero } from '@/components/hero'
-import { ModelRoadmap } from '@/components/model-roadmap'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 
@@ -15,7 +14,6 @@ export default function HomePage() {
         <Hero />
         <CharacterRoster />
         <Features />
-        <ModelRoadmap />
         <DownloadSection />
         <Faq />
       </div>

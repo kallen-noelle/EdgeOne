@@ -336,6 +336,31 @@ button {
   }
 }
 
+@media (min-width: 1280px) {
+  .hero-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .hero-stage {
+    width: 100%;
+  }
+
+  .showcase {
+    width: 100%;
+  }
+
+  .showcase-stage {
+    width: 100%;
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-grid {
+    grid-template-columns: 0.84fr 1.16fr;
+  }
+}
+
 .hero h1 {
   margin: 22px 0 0;
   font-family: var(--font-display);
@@ -376,38 +401,6 @@ button {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 38px;
-}
-
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 34px;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(7, 32, 41, 0.55);
-  color: var(--ink-soft);
-  font-size: 13px;
-}
-
-.chip .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 10px var(--teal);
-}
-
-.chip.is-planned .dot {
-  background: var(--amber);
-  box-shadow: 0 0 10px var(--amber);
 }
 
 /* Stage showcase */
@@ -739,108 +732,6 @@ button {
   color: var(--muted);
   font-size: 14.5px;
   line-height: 1.8;
-}
-
-/* Roadmap */
-
-.roadmap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  counter-reset: stage;
-}
-
-.stage {
-  position: relative;
-  padding: 30px 26px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: rgba(5, 26, 34, 0.6);
-}
-
-.stage.is-now {
-  border-color: rgba(79, 227, 198, 0.45);
-  background: linear-gradient(160deg, rgba(12, 66, 74, 0.8), rgba(4, 22, 29, 0.9));
-  box-shadow: 0 24px 60px rgba(6, 80, 74, 0.35);
-}
-
-.stage-index {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-}
-
-.stage-index::before {
-  counter-increment: stage;
-  content: '0' counter(stage);
-}
-
-.stage h3 {
-  margin: 16px 0 6px;
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.stage p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14.5px;
-  line-height: 1.8;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 18px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.badge.is-live {
-  color: var(--teal);
-  background: rgba(79, 227, 198, 0.12);
-  border: 1px solid rgba(79, 227, 198, 0.3);
-}
-
-.badge.is-planned {
-  color: var(--amber);
-  background: rgba(255, 177, 104, 0.1);
-  border: 1px solid rgba(255, 177, 104, 0.26);
-}
-
-.models-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 26px;
-}
-
-.model-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border: 1px dashed var(--line-strong);
-  border-radius: 999px;
-  color: var(--ink-soft);
-  font-size: 14px;
-}
-
-.model-pill.is-now {
-  border-style: solid;
-  border-color: rgba(79, 227, 198, 0.5);
-  background: rgba(79, 227, 198, 0.1);
-  color: var(--ink);
 }
 
 /* Download */
@@ -1204,10 +1095,6 @@ button {
     gap: 18px;
     margin-bottom: 40px;
   }
-
-  .roadmap {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 560px) {
@@ -1315,10 +1202,6 @@ html[data-theme='light'] .btn-ghost:hover {
   background: rgba(10, 60, 66, 0.08);
 }
 
-html[data-theme='light'] .chip {
-  background: rgba(10, 60, 66, 0.04);
-}
-
 html[data-theme='light'] .showcase {
   background:
     radial-gradient(70% 50% at 50% 0%, color-mix(in srgb, var(--stage-accent) 18%, transparent), transparent 70%),
@@ -1357,16 +1240,6 @@ html[data-theme='light'] .roster-count {
 
 html[data-theme='light'] .feature {
   background: linear-gradient(180deg, #ffffff, #f5f8f9);
-}
-
-html[data-theme='light'] .stage {
-  background: rgba(255, 255, 255, 0.72);
-}
-
-html[data-theme='light'] .stage.is-now {
-  border-color: rgba(14, 156, 134, 0.4);
-  background: linear-gradient(160deg, #ffffff, #eefaf7);
-  box-shadow: 0 20px 50px rgba(14, 120, 105, 0.14);
 }
 
 html[data-theme='light'] .download-panel {

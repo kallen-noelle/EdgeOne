@@ -10,7 +10,6 @@ const githubUrl = 'https://github.com/kallen-noelle/aipetdex'
 const links = [
   { href: '#characters', label: '角色' },
   { href: '#abilities', label: '能力' },
-  { href: '#models', label: '模型' },
   { href: '#download', label: '下载' },
   { href: '#faq', label: '问答' },
 ]

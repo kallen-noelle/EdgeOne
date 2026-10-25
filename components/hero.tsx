@@ -1,4 +1,4 @@
-import { characterCount, totalClips } from '@/lib/characters'
+import { characterCount } from '@/lib/characters'
 
 import { CharacterShowcase } from './character-showcase'
 import { Reveal } from './reveal'
@@ -37,23 +37,6 @@ export function Hero() {
                 </svg>
               </a>
               <a className="btn btn-ghost" href="#characters">{`认识 ${characterCount} 位角色`}</a>
-            </div>
-          </Reveal>
-
-          <Reveal delay={320}>
-            <div className="hero-meta">
-              <span className="chip">
-                <span className="dot" />
-                当前模型 DeepSeek
-              </span>
-              <span className="chip">
-                <span className="dot" />
-                {`首发角色 ${characterCount} 位`}
-              </span>
-              <span className="chip">
-                <span className="dot" />
-                {`${totalClips} 段透明动画`}
-              </span>
             </div>
           </Reveal>
         </div>
