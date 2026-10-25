@@ -8,7 +8,8 @@ Product site for aipetdex, the Windows desktop pet. It uses Next.js static expor
 - Plays interactive idle, talk, thinking, and one-shot reaction clips on the hero stage.
 - Explains the desktop pet features, model support, and download steps.
 - Links the Windows installer to the project releases.
-- Links the source repository at `https://github.com/kallen-noelle/aipetdex`.
+- Links the source repository from a GitHub icon in the header.
+- Switches between the black and white theme. The choice is stored in local storage.
 
 ## Use this app
 

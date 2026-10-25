@@ -58,7 +58,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200}>
+        <Reveal delay={200} className="hero-stage">
           <CharacterShowcase />
         </Reveal>
       </div>

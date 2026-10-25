@@ -1,4 +1,3 @@
-import { AvatarShowcase } from '@/components/avatar-showcase'
 import { CharacterRoster } from '@/components/character-roster'
 import { DownloadSection } from '@/components/download-section'
 import { Faq } from '@/components/faq'
@@ -15,7 +14,6 @@ export default function HomePage() {
       <div className="page-body">
         <Hero />
         <CharacterRoster />
-        <AvatarShowcase />
         <Features />
         <ModelRoadmap />
         <DownloadSection />

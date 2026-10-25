@@ -233,6 +233,37 @@ button {
   margin-left: 30px;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  color: var(--ink);
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* Buttons */
 
 .btn {
@@ -297,6 +328,12 @@ button {
   grid-template-columns: 1.02fr 0.98fr;
   align-items: center;
   gap: 72px;
+}
+
+@media (min-width: 821px) {
+  .hero-stage {
+    justify-self: end;
+  }
 }
 
 .hero h1 {
@@ -404,6 +441,7 @@ button {
   color: var(--ink-soft);
   font-size: 12px;
   cursor: pointer;
+  --tab-color: var(--tab-accent);
   transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
@@ -412,7 +450,9 @@ button {
 }
 
 .showcase-tab.is-active {
+  border-color: var(--tab-color);
   background: rgba(255, 255, 255, 0.08);
+  color: var(--tab-color);
 }
 
 .showcase-stage {
@@ -487,30 +527,6 @@ button {
   background: color-mix(in srgb, var(--stage-accent) 22%, rgba(255, 255, 255, 0.06));
 }
 
-.showcase-github {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  color: var(--ink-soft);
-  font-size: 12.5px;
-  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.showcase-github svg {
-  width: 15px;
-  height: 15px;
-  flex: none;
-}
-
-.showcase-github:hover {
-  color: var(--ink);
-  border-color: color-mix(in srgb, var(--stage-accent) 55%, var(--line-strong));
-  background: rgba(255, 255, 255, 0.06);
-}
-
 /* Sections */
 
 .section {
@@ -541,72 +557,11 @@ button {
   max-width: 25em;
 }
 
-/* Clips */
-
-.clip-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-
-.clip {
-  position: relative;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, rgba(10, 45, 56, 0.75), rgba(4, 20, 27, 0.9));
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.clip:hover {
-  transform: translateY(-6px);
-  border-color: var(--line-strong);
-  box-shadow: 0 22px 50px rgba(2, 12, 18, 0.6);
-}
-
-.clip-window {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  padding: 8px;
-  overflow: hidden;
-  background:
-    radial-gradient(70% 50% at 50% 15%, rgba(79, 227, 198, 0.12), transparent 70%),
-    linear-gradient(180deg, rgba(9, 40, 50, 0.6), rgba(4, 18, 25, 0.9));
-}
-
-.clip-window video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.75);
-  transform-origin: 50% 55%;
-}
-
-.clip-label {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 14px 16px;
-  border-top: 1px solid var(--line);
-  font-family: var(--font-display);
-  font-size: 16px;
-}
-
-.clip-label span {
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.16em;
-}
-
 /* Characters */
 
 .roster-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
@@ -715,11 +670,6 @@ button {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
-}
-
-.clip-window video.is-character {
-  transform: scale(1.15);
-  transform-origin: 50% 55%;
 }
 
 /* Features */
@@ -1205,10 +1155,6 @@ button {
     gap: 48px;
   }
 
-  .clip-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .roster-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1228,8 +1174,12 @@ button {
     display: none;
   }
 
-  .nav-cta {
+  .nav-actions {
     margin-left: auto;
+  }
+
+  .nav-cta {
+    margin-left: 12px;
   }
 
   .hero {
@@ -1269,7 +1219,6 @@ button {
     display: none;
   }
 
-  .clip-grid,
   .feature-grid,
   .roster-grid {
     grid-template-columns: 1fr;
@@ -1301,4 +1250,146 @@ button {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Light theme */
+
+html[data-theme='light'] {
+  --sea-950: #ffffff;
+  --sea-900: #ffffff;
+  --sea-800: #f5f8f9;
+  --sea-700: #eef3f4;
+  --sea-600: #e5ebed;
+  --ink: #0a1a1f;
+  --ink-soft: #2a4149;
+  --muted: #5b737c;
+  --teal: #0e9c86;
+  --teal-deep: #0b7d6b;
+  --line: rgba(10, 60, 66, 0.14);
+  --line-strong: rgba(10, 60, 66, 0.28);
+  --glass: rgba(255, 255, 255, 0.75);
+}
+
+html[data-theme='light'] body::before {
+  background:
+    radial-gradient(60rem 60rem at 78% -10%, rgba(14, 156, 134, 0.12), transparent 62%),
+    radial-gradient(46rem 46rem at 8% 8%, rgba(29, 96, 138, 0.08), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f3f7f8 55%, #ffffff 100%);
+}
+
+html[data-theme='light'] ::selection {
+  background: rgba(14, 156, 134, 0.2);
+  color: #06141a;
+}
+
+html[data-theme='light'] .site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+html[data-theme='light'] .icon-btn,
+html[data-theme='light'] .showcase-tab,
+html[data-theme='light'] .showcase-btn {
+  background: rgba(10, 60, 66, 0.05);
+}
+
+html[data-theme='light'] .icon-btn:hover,
+html[data-theme='light'] .showcase-tab:hover,
+html[data-theme='light'] .showcase-btn:hover {
+  background: rgba(10, 60, 66, 0.1);
+}
+
+html[data-theme='light'] .showcase-tab.is-active {
+  --tab-color: color-mix(in srgb, var(--tab-accent) 58%, #06141a);
+  background: rgba(10, 60, 66, 0.06);
+}
+
+html[data-theme='light'] .showcase-btn.is-active {
+  background: color-mix(in srgb, var(--stage-accent) 26%, #ffffff);
+}
+
+html[data-theme='light'] .btn-ghost {
+  background: rgba(10, 60, 66, 0.04);
+}
+
+html[data-theme='light'] .btn-ghost:hover {
+  background: rgba(10, 60, 66, 0.08);
+}
+
+html[data-theme='light'] .chip {
+  background: rgba(10, 60, 66, 0.04);
+}
+
+html[data-theme='light'] .showcase {
+  background:
+    radial-gradient(70% 50% at 50% 0%, color-mix(in srgb, var(--stage-accent) 18%, transparent), transparent 70%),
+    linear-gradient(180deg, #ffffff, #f4f8f9);
+  box-shadow: 0 24px 60px rgba(10, 40, 50, 0.12);
+}
+
+html[data-theme='light'] .showcase-stage {
+  background: rgba(10, 20, 30, 0.04);
+  box-shadow:
+    inset 0 0 0 1px rgba(10, 60, 66, 0.12),
+    0 18px 40px rgba(10, 40, 50, 0.1);
+}
+
+html[data-theme='light'] .roster-card {
+  background: linear-gradient(180deg, #ffffff, #f4f8f9);
+}
+
+html[data-theme='light'] .roster-card:hover {
+  box-shadow: 0 20px 44px rgba(10, 40, 50, 0.14);
+}
+
+html[data-theme='light'] .roster-window {
+  background:
+    radial-gradient(70% 50% at 50% 15%, rgba(14, 156, 134, 0.1), transparent 70%),
+    linear-gradient(180deg, #f8fbfb, #eef4f5);
+}
+
+html[data-theme='light'] .roster-window video {
+  filter: drop-shadow(0 14px 24px rgba(10, 40, 50, 0.18));
+}
+
+html[data-theme='light'] .roster-count {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+html[data-theme='light'] .feature {
+  background: linear-gradient(180deg, #ffffff, #f5f8f9);
+}
+
+html[data-theme='light'] .stage {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme='light'] .stage.is-now {
+  border-color: rgba(14, 156, 134, 0.4);
+  background: linear-gradient(160deg, #ffffff, #eefaf7);
+  box-shadow: 0 20px 50px rgba(14, 120, 105, 0.14);
+}
+
+html[data-theme='light'] .download-panel {
+  background:
+    radial-gradient(90% 80% at 100% 0%, rgba(14, 156, 134, 0.12), transparent 62%),
+    linear-gradient(160deg, #ffffff, #f2f7f7);
+}
+
+html[data-theme='light'] .installer {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 12px 30px rgba(10, 40, 50, 0.08);
+}
+
+html[data-theme='light'] .installer-mark {
+  background: rgba(10, 60, 66, 0.05);
+}
+
+html[data-theme='light'] .faq-item {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme='light'] .faq-item[open] {
+  background: #ffffff;
 }
